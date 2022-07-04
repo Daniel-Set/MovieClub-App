@@ -18,7 +18,7 @@ public class MovieController {
         this.movieService = movieService;
     }
 
-    @GetMapping("/film/{id}")
+    @GetMapping("/movie/{id}")
     public String getMovie(@PathVariable long id, Model model) {
         Optional<MovieDto> optionalMovie = movieService.findMovieById(id);
         optionalMovie.ifPresent(movie -> model.addAttribute("movie", movie));
