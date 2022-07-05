@@ -2,7 +2,6 @@ package pl.setlikd.movieclub.domain.genre;
 
 import org.springframework.stereotype.Service;
 import pl.setlikd.movieclub.domain.genre.dto.GenreDto;
-
 import java.util.Optional;
 
 @Service
@@ -17,6 +16,4 @@ public class GenreService {
         return genreRepository.findByNameIgnoreCase(name)
                 .map(GenreDtoMapper::map);
     }
-
-
 }

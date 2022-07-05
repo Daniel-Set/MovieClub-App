@@ -28,8 +28,8 @@
                     <p class="movie-summary-item" th:text="|Rok: ${movie.releaseYear}|">Rok: 2001</p>
                     <!-- Ustawiamy link do strony gatunku filmowego, np. /gatunek/fantasy -->
                     <p class="movie-summary-item">Gatunek: <a href="#"
-                                                              th:href="@{|/gatunek/${movie.genre}|}"
-                                                              th:text="${movie.genre}">Fantasy</a>
+                                                              th:href="@{|/genre/${movie.genre}|}"
+                                                              th:text="${movie.genre}"></a>
                     </p>
                     <p class="movie-summary-item" th:text="${movie.shortDescription}">
                         Podróż odważnego hobbita i jego towarzyszy w poszukiwaniu pierścienia.
