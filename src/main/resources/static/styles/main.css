@@ -70,36 +70,9 @@ i powinna zajmować większość dostępnej przestrzeni
 }
 /*FOOTER END*/
 
-/*Responsive*/
-@media only screen and (min-width: 992px) {
-    /*Na ekranie powyżej 992px ukrywamy przycisk do rozwijania menu*/
-    .menu-toggle {
-        display: none;
-    }
-
-    /*Elementy menu nie powinny już zajmować całej szerokości, tylko być obok siebie*/
-    .menu-item {
-        display: block;
-        width: auto;
-        border-bottom: 0;
-    }
-
-    /*Kontener z logo powinien być rozciągnięty, a nawigacja po prawej stronie*/
-    .menu-logo-container {
-        flex: 1;
-    }
-
-    /*Na dużym ekranie ograniczamy szerokość do 960px*/
-    .main-content,
-    .menu {
-        align-self: center;
-        width: 960px;
-    }
-}
-
 /*Jumbotron START*/
 .jumbotron {
-    background-image: url("../img/pexels-luis-quintero-2774556.jpg");
+    background-image: url("../img/jumbotron.png");
     background-position: center;
     background-repeat: no-repeat;
     padding: 2rem;
@@ -236,6 +209,21 @@ i powinna zajmować większość dostępnej przestrzeni
 }
 /*Movie.html END*/
 
+/*error pages START*/
+.error-container {
+    margin: 32px auto;
+}
+.error-container > * {
+    display: block;
+    text-align: center;
+}
+.error-header,
+.error-icon {
+    font-size: 2rem;
+    margin: 16px 0;
+}
+/*error pages END*/
+
 /*Responsive*/
 @media only screen and (min-width: 992px) {
     /*Na ekranie powyżej 992px ukrywamy przycisk do rozwijania menu*/
@@ -280,19 +268,4 @@ i powinna zajmować większość dostępnej przestrzeni
         font-size: 1.2rem;
         margin: 0 4px;
     }
-
-    /*error pages START*/
-    .error-container {
-        margin: 32px auto;
-    }
-    .error-container > * {
-        display: block;
-        text-align: center;
-    }
-    .error-header,
-    .error-icon {
-        font-size: 2rem;
-        margin: 16px 0;
-    }
-    /*error pages END*/
 }

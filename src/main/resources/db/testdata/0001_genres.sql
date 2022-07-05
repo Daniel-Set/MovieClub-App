@@ -1,4 +1,3 @@
--- noinspection SqlDialectInspectionForFile
 insert into genre (name, description) values ('Drama', 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.');
 insert into genre (name, description) values ('Comedy', 'Duis mattis egestas metus. Aenean fermentum. Donec ut mauris eget massa tempor convallis.');
 insert into genre (name, description) values ('Romance', 'Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat.');
