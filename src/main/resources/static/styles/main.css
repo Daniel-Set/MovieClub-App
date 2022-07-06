@@ -333,3 +333,14 @@ textarea {
 .mc-form > input[type=file] {
     color: white;
 }
+
+/*Tekst nad formularzem*/
+.mc-form-message {
+    color: #ffc107;
+    text-align: center;
+}
+
+.registration-link {
+    text-align: center;
+    margin-top: 32px;
+}
