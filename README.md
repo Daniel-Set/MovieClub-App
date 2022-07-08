@@ -17,3 +17,12 @@ to add new content.
 - MYSQL
 - H2
 - Liquibase
+
+### Technology usage:
+- Spring security to manage user's log-in details,
+- MYSQL database to store user's and site's data,
+- JPA/Hibernate to communicate with the database and create easy access to it's contents,
+- Maven to set dependencies and create initial project,
+- SprinBoot to quickly setup foundation for the project,
+- Thymeleaf for the viewpage logic,
+- Liquibase to migrate database and for profile dev&prod
