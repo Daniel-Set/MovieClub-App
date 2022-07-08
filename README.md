@@ -26,3 +26,5 @@ to add new content.
 - SprinBoot to quickly setup foundation for the project,
 - Thymeleaf for the viewpage logic,
 - Liquibase to migrate database and for profile dev&prod
+
+### Website screenshots (click to enlarge):
