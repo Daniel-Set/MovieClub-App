@@ -39,6 +39,4 @@ public class MovieManagementController {
                 "Film %s został zapisany".formatted(movie.getTitle()));
         return "redirect:/admin";
     }
-
-
 }

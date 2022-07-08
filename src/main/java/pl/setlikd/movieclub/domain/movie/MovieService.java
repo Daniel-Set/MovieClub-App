@@ -1,7 +1,7 @@
 package pl.setlikd.movieclub.domain.movie;
 
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import pl.setlikd.movieclub.domain.genre.Genre;
 import pl.setlikd.movieclub.domain.genre.GenreRepository;
 import pl.setlikd.movieclub.domain.movie.dto.MovieDto;
@@ -15,14 +15,15 @@ import java.util.Optional;
 public class MovieService {
 
     private final MovieRepository movieRepository;
-    private final FileStorageService fileStorageService;
     private final GenreRepository genreRepository;
+    private final FileStorageService fileStorageService;
 
-
-    public MovieService(MovieRepository movieRepository, FileStorageService fileStorageService, GenreRepository genreRepository) {
+    public MovieService(MovieRepository movieRepository,
+                        GenreRepository genreRepository,
+                        FileStorageService fileStorageService) {
         this.movieRepository = movieRepository;
-        this.fileStorageService = fileStorageService;
         this.genreRepository = genreRepository;
+        this.fileStorageService = fileStorageService;
     }
 
     public List<MovieDto> findAllPromotedMovies() {
@@ -41,7 +42,6 @@ public class MovieService {
                 .toList();
     }
 
-    @Transactional
     public void addMovie(MovieSaveDto movieToSave) {
         Movie movie = new Movie();
         movie.setTitle(movieToSave.getTitle());
@@ -60,5 +60,10 @@ public class MovieService {
         movieRepository.save(movie);
     }
 
-
+    public List<MovieDto> findTopMovies(int size) {
+        Pageable page = Pageable.ofSize(size);
+        return movieRepository.findTopByRating(page).stream()
+                .map(MovieDtoMapper::map)
+                .toList();
+    }
 }

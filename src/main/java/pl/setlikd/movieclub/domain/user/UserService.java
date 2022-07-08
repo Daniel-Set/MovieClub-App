@@ -2,21 +2,21 @@ package pl.setlikd.movieclub.domain.user;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import pl.setlikd.movieclub.domain.user.dto.UserCredentialsDto;
 import pl.setlikd.movieclub.domain.user.dto.UserRegistrationDto;
-
-import javax.transaction.Transactional;
 import java.util.Optional;
 
 @Service
 public class UserService {
+    private static final String DEFAULT_USER_ROLE = "USER";
     private final UserRepository userRepository;
     private final UserRoleRepository userRoleRepository;
     private final PasswordEncoder passwordEncoder;
-    private static final String DEFAULT_USER_ROLE = "USER";
 
-
-    public UserService(UserRepository userRepository, UserRoleRepository userRoleRepository, PasswordEncoder passwordEncoder) {
+    public UserService(UserRepository userRepository,
+                       UserRoleRepository userRoleRepository,
+                       PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
         this.userRoleRepository = userRoleRepository;
         this.passwordEncoder = passwordEncoder;

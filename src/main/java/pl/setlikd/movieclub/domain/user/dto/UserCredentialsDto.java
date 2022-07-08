@@ -1,12 +1,7 @@
 package pl.setlikd.movieclub.domain.user.dto;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import java.util.Set;
 
-@Getter
-@Setter
 public class UserCredentialsDto {
     private final String email;
     private final String password;
@@ -16,5 +11,17 @@ public class UserCredentialsDto {
         this.email = email;
         this.password = password;
         this.roles = roles;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public Set<String> getRoles() {
+        return roles;
     }
 }
