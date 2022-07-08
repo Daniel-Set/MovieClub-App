@@ -4,6 +4,7 @@ values
     ('admin@example.com', '{noop}adminpass'),   -- 1
     ('user@example.com', '{noop}userpass'),     -- 2
     ('editor@example.com', '{noop}editorpass'); -- 3
+
 insert into
     user_role (name, description)
 values

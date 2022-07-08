@@ -10,28 +10,25 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
-import static org.springframework.security.config.Customizer.withDefaults;
-
 @Configuration
 class CustomSecurityConfig {
     private static final String USER_ROLE = "USER";
     private static final String EDITOR_ROLE = "EDITOR";
     private static final String ADMIN_ROLE = "ADMIN";
-
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests((authz) -> authz
+                        .mvcMatchers("/ocen-film").authenticated()
                         .mvcMatchers("/admin/**").hasAnyRole(EDITOR_ROLE, ADMIN_ROLE)
-                        .anyRequest().permitAll())
-                .formLogin(login -> login.loginPage("/login").permitAll())
+                        .anyRequest().permitAll()
+                )
+                .formLogin(login -> login
+                        .loginPage("/login").permitAll()
+                )
                 .logout(logout -> logout
                         .logoutRequestMatcher(new AntPathRequestMatcher("/logout/**", HttpMethod.GET.name()))
                         .logoutSuccessUrl("/login?logout").permitAll()
                 );
-
-        /**
-         * access-to-console-H2
-         */
         http.csrf().ignoringRequestMatchers(new AntPathRequestMatcher("/h2-console/**"));
         http.headers().frameOptions().sameOrigin();
         return http.build();
@@ -45,10 +42,6 @@ class CustomSecurityConfig {
                 "/styles/**"
         );
     }
-
-    /**
-     * Hashing password
-     */
 
     @Bean
     public PasswordEncoder passwordEncoder() {

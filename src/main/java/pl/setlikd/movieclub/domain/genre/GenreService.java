@@ -27,11 +27,12 @@ public class GenreService {
                 .toList();
     }
 
+
     @Transactional
-    public void addGenre(GenreDto genreDto) {
-        Genre genre = new Genre();
-        genre.setName(genreDto.getName());
-        genre.setDescription(genreDto.getDescription());
-        genreRepository.save(genre);
+    public void addGenre(GenreDto genre) {
+        Genre genreToSave = new Genre();
+        genreToSave.setName(genre.getName());
+        genreToSave.setDescription(genre.getDescription());
+        genreRepository.save(genreToSave);
     }
 }
