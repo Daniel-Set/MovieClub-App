@@ -34,6 +34,7 @@ to add new content.
 ![wyloguj się - MovieClub](https://user-images.githubusercontent.com/94791227/178098158-5e4bd650-ac3c-42c6-9187-9a3d05e981be.png)
 ![Zarejestruj się - MovieClub](https://user-images.githubusercontent.com/94791227/178098165-e4853ac9-e0ff-48bf-999d-cfae4aee135e.png)
 ![Panel administracyjny](https://user-images.githubusercontent.com/94791227/178098164-46ea9b39-5cda-434c-b380-4171a48fc591.png)
+![Avengers - MovieClub](https://user-images.githubusercontent.com/94791227/178098575-bd198022-905d-4d5b-9baf-9bcbf66713a3.png)
 ![Dodaj nowy gatunek filmowy](https://user-images.githubusercontent.com/94791227/178098161-3277f1a3-bd68-432f-835a-bf4a8c9b351b.png)
 ![Dodaj nowy film](https://user-images.githubusercontent.com/94791227/178098162-190d8104-a7c6-4996-9aa9-ba50033dedcb.png)
 
