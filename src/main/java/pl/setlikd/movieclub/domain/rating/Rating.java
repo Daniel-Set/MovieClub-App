@@ -1,9 +1,14 @@
 package pl.setlikd.movieclub.domain.rating;
 
+import lombok.Getter;
+import lombok.Setter;
 import pl.setlikd.movieclub.domain.movie.Movie;
 import pl.setlikd.movieclub.domain.user.User;
+
 import javax.persistence.*;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "movie_rating")
 public class Rating {
@@ -27,35 +32,5 @@ public class Rating {
         this.rating = rating;
     }
 
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public Movie getMovie() {
-        return movie;
-    }
-
-    public void setMovie(Movie movie) {
-        this.movie = movie;
-    }
-
-    public Integer getRating() {
-        return rating;
-    }
-
-    public void setRating(Integer rating) {
-        this.rating = rating;
-    }
 }
